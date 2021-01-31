@@ -1,5 +1,5 @@
 const RPCDAEMON_METHODS = require("../constants/rpcdaemon-methods");
-const { RPCDaemon } = require("../dist/index.cjs");
+const { RPCDaemon } = require("../index");
 
 describe("RPCDaemon client class", () => {
   const client = new RPCDaemon({
