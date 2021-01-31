@@ -1,4 +1,4 @@
-# Oxen RPC Library
+# Oxen RPC Library ![Node.js Package](https://github.com/0d101/oxen-rpc/workflows/Node.js%20Package/badge.svg)
 
 This library allows you to easily call the daemon, service node or wallet's RPC methods.
 
