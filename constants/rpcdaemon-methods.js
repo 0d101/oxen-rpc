@@ -12,7 +12,7 @@ const COMMON_STRUCT_BLOCKHEADER = {
   num_txes: Number,
   orphan_status: Boolean,
   reward: Number,
-  timestamp: Number
+  timestamp: Number,
 };
 
 module.exports = {
@@ -22,8 +22,8 @@ module.exports = {
   get_block_count: {
     output: {
       count: Number,
-      status: String
-    }
+      status: String,
+    },
   },
   /**
    * @description Look up a block's hash by its height.
@@ -31,7 +31,7 @@ module.exports = {
   on_get_block_hash: {
     input: [Number],
     output: String,
-    formatInput: simpleTypeToArray
+    formatInput: simpleTypeToArray,
   },
   /**
    * @description Get a block template on which mining a new block.
@@ -39,7 +39,7 @@ module.exports = {
   get_block_template: {
     input: {
       wallet_address: String,
-      reserve_size: Number
+      reserve_size: Number,
     },
     output: {
       blocktemplate_blob: String,
@@ -50,8 +50,8 @@ module.exports = {
       prev_hash: Number,
       reserved_offset: Number,
       status: String,
-      untrusted: Boolean
-    }
+      untrusted: Boolean,
+    },
   },
   /**
    * @description Submit a mined block to the network.
@@ -59,8 +59,8 @@ module.exports = {
   submit_block: {
     input: [String], // @todo: check blob data integrity ?
     output: {
-      status: String
-    }
+      status: String,
+    },
   },
   /**
    * @description get_last_block_header
@@ -69,44 +69,44 @@ module.exports = {
     output: {
       block_header: COMMON_STRUCT_BLOCKHEADER,
       status: String,
-      untrusted: Boolean
-    }
+      untrusted: Boolean,
+    },
   },
   get_block_header_by_hash: {
     input: {
-      hash: String
+      hash: String,
     },
     output: {
       block_header: COMMON_STRUCT_BLOCKHEADER,
       status: String,
-      untrusted: Boolean
-    }
+      untrusted: Boolean,
+    },
   },
   get_block_header_by_height: {
     input: {
-      height: Number
+      height: Number,
     },
     output: {
       block_header: COMMON_STRUCT_BLOCKHEADER,
       status: String,
-      untrusted: Boolean
-    }
+      untrusted: Boolean,
+    },
   },
   get_block_headers_range: {
     input: {
       start_height: Number,
-      end_height: Number
+      end_height: Number,
     },
     output: {
       headers: [COMMON_STRUCT_BLOCKHEADER],
       status: String,
-      untrusted: Boolean
-    }
+      untrusted: Boolean,
+    },
   },
   get_block: {
     input: {
       height: Number,
-      hash: String
+      hash: String,
     },
     output: {
       blob: String,
@@ -115,8 +115,8 @@ module.exports = {
       miner_tx_hash: String,
       tx_hashes: [String],
       status: String,
-      untrusted: Boolean
-    }
+      untrusted: Boolean,
+    },
   },
   get_connections: {
     output: {
@@ -142,10 +142,10 @@ module.exports = {
           send_count: Number,
           send_idle_time: Number,
           state: String,
-          support_flags: Number
-        }
-      ]
-    }
+          support_flags: Number,
+        },
+      ],
+    },
   },
   get_info: {},
   hard_fork_info: {},
@@ -160,5 +160,5 @@ module.exports = {
   sync_info: {},
   get_txpool_backlog: {},
   get_output_distribution: {},
-  get_version: {}
+  get_version: {},
 };
